@@ -1,7 +1,15 @@
 import React from "react";
+import Item from "../components/Item";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+    </div>
+  );
 };
 
 export default Home;
