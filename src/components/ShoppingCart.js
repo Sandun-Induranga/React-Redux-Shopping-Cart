@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 const ShoppingCart = ({ items, addItem, removeItem }) => {
   const handleAddItem = () => {
     const item = {
-      id: Math.random(),
-      name: `Item ${Math.floor(Math.random() * 100)}`,
+      id: 1,
+      name: `Item 1`,
     };
     addItem(item);
   };
