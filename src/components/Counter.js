@@ -5,10 +5,20 @@ const Counter = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div>
-      <button onClick={() => setCount(count - 1)}>-</button>
+    <div className="flex gap-2">
+      <button
+        className="w-6 rounded bg-pink-300 text-pink-900"
+        onClick={() => setCount(count - 1)}
+      >
+        -
+      </button>
       <span>{count}</span>
-      <button onClick={() => setCount(count + 1)}>+</button>
+      <button
+        className="w-6 rounded bg-pink-300 text-pink-900"
+        onClick={() => setCount(count + 1)}
+      >
+        +
+      </button>
     </div>
   );
 };
