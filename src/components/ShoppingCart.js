@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Item from "./Item";
+import Counter from "./Counter";
 
 const ShoppingCart = ({ items, addItem, removeItem }) => {
   // const handleAddItem = () => {
@@ -49,7 +50,7 @@ const ShoppingCart = ({ items, addItem, removeItem }) => {
               className="py-2 px-4 flex justify-between mb-4 bg-slate-100 rounded"
               key={item.id}
             >
-              {item.name}{" "}
+              {item.name} <Counter />
               <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
             </li>
           ))}
