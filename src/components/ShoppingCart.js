@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import Item from "./Item";
 
 const ShoppingCart = ({ items, addItem, removeItem }) => {
   const handleAddItem = () => {
@@ -18,6 +19,10 @@ const ShoppingCart = ({ items, addItem, removeItem }) => {
     <div>
       <h1>Shopping Cart</h1>
       <button onClick={handleAddItem}>Add Item</button>
+      <Item id={1} name="Item 1" />
+      <Item id={2} name="Item 2" />
+      <Item id={3} name="Item 3" />
+      <Item id={4} name="Item 4" />
       <ul>
         {items.map((item) => (
           <li key={item.id}>

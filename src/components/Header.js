@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="w-full h-20 bg-pink-700 flex justify-between items-center px-10">
+    <div className="w-full h-20 bg-pink-700 flex justify-between items-center px-10 fixed">
       <section>
         <h1 className="text-white text-xl">Shopping Cart</h1>
       </section>
