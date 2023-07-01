@@ -16,7 +16,7 @@ const ShoppingCart = ({ items, addItem, removeItem }) => {
   };
 
   return (
-    <div className="flex w-full">
+    <div className="flex w-full mt-20 gap-6">
       <section className="w-2/3">
         {/* <h1>Shopping Cart</h1>
         <button onClick={handleAddItem}>Add Item</button> */}
@@ -41,10 +41,11 @@ const ShoppingCart = ({ items, addItem, removeItem }) => {
           />
         </aside>
       </section>
-      <section>
-        <ul>
+      <section className="border shadow w-1/3 h-full rounded p-4">
+        <h1 className="text-2xl text-slate-700 text-center">Your Cart</h1>
+        <ul className="bg-slate-100 py-2 px-4 text-lg text-slate-700 rounded">
           {items.map((item) => (
-            <li key={item.id}>
+            <li className="flex justify-between" key={item.id}>
               {item.name}{" "}
               <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
             </li>
