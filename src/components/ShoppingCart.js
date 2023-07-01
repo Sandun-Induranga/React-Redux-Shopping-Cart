@@ -42,10 +42,13 @@ const ShoppingCart = ({ items, addItem, removeItem }) => {
         </aside>
       </section>
       <section className="border shadow w-1/3 h-full rounded p-4">
-        <h1 className="text-2xl text-slate-700 text-center">Your Cart</h1>
-        <ul className="bg-slate-100 py-2 px-4 text-lg text-slate-700 rounded">
+        <h1 className="text-2xl text-slate-700 text-center mb-10">Your Cart</h1>
+        <ul className="text-lg text-slate-700">
           {items.map((item) => (
-            <li className="flex justify-between" key={item.id}>
+            <li
+              className="py-2 px-4 flex justify-between mb-4 bg-slate-100 rounded"
+              key={item.id}
+            >
               {item.name}{" "}
               <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
             </li>
