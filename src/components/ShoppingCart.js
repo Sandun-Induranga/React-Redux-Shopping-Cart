@@ -16,21 +16,27 @@ const ShoppingCart = ({ items, addItem, removeItem }) => {
   };
 
   return (
-    <div>
-      <h1>Shopping Cart</h1>
-      <button onClick={handleAddItem}>Add Item</button>
-      <Item id={1} name="Item 1" />
-      <Item id={2} name="Item 2" />
-      <Item id={3} name="Item 3" />
-      <Item id={4} name="Item 4" />
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            {item.name}{" "}
-            <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
-          </li>
-        ))}
-      </ul>
+    <div className="flex w-full mt-20">
+      <section className="w-2/3">
+        {/* <h1>Shopping Cart</h1>
+        <button onClick={handleAddItem}>Add Item</button> */}
+        <aside className="grid grid-cols-3 gap-4">
+          <Item id={1} name="Item 1" />
+          <Item id={2} name="Item 2" />
+          <Item id={3} name="Item 3" />
+          <Item id={4} name="Item 4" />
+        </aside>
+      </section>
+      <section>
+        <ul>
+          {items.map((item) => (
+            <li key={item.id}>
+              {item.name}{" "}
+              <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 };
