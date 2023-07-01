@@ -1,6 +1,9 @@
 import React from "react";
 
 const Item = (props) => {
+  const handleRemoveItem = (id) => {
+    props.removeItem(id);
+  };
   const handleAddItem = () => {
     const item = {
       id: props.id,

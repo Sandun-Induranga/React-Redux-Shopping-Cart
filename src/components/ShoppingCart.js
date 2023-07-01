@@ -3,28 +3,42 @@ import { connect } from "react-redux";
 import Item from "./Item";
 
 const ShoppingCart = ({ items, addItem, removeItem }) => {
-  const handleAddItem = () => {
-    const item = {
-      id: 1,
-      name: `Item 1`,
-    };
-    addItem(item);
-  };
+  // const handleAddItem = () => {
+  //   const item = {
+  //     id: 1,
+  //     name: `Item 1`,
+  //   };
+  //   addItem(item);
+  // };
 
   const handleRemoveItem = (id) => {
     removeItem(id);
   };
 
   return (
-    <div className="flex w-full mt-20">
+    <div className="flex w-full">
       <section className="w-2/3">
         {/* <h1>Shopping Cart</h1>
         <button onClick={handleAddItem}>Add Item</button> */}
         <aside className="grid grid-cols-3 gap-4">
-          <Item id={1} name="Item 1" />
-          <Item id={2} name="Item 2" />
-          <Item id={3} name="Item 3" />
-          <Item id={4} name="Item 4" />
+          <Item
+            id={1}
+            name="Item 1"
+            addItem={addItem}
+            removeItem={removeItem}
+          />
+          <Item
+            id={2}
+            name="Item 2"
+            addItem={addItem}
+            removeItem={removeItem}
+          />
+          <Item
+            id={3}
+            name="Item 3"
+            addItem={addItem}
+            removeItem={removeItem}
+          />
         </aside>
       </section>
       <section>
